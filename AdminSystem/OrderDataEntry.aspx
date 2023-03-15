@@ -25,7 +25,7 @@
         <asp:TextBox ID="DPostCode" runat="server" height="22px" style="z-index: 1; left: 149px; top: 151px; position: absolute" width="128px"></asp:TextBox>
         <asp:CheckBox ID="chkDelivered" runat="server" style="z-index: 1; left: 53px; top: 214px; position: absolute" Text="Delivered" />
         <asp:Label ID="lblError" runat="server" style="z-index: 1; left: 17px; top: 244px; position: absolute"></asp:Label>
-        <asp:Button ID="btnOk" runat="server" OnClick="btnOk_Click" style="z-index: 1; left: 18px; top: 279px; position: absolute" Text="OK" />
+        <asp:Button ID="btnOk" runat="server" OnClick="btnOk_Click" style="z-index: 1; left: 38px; top: 349px; position: absolute" Text="OK" />
         <p>
             <asp:Label ID="Adress" runat="server" height="19px" style="z-index: 1; left: 10px; top: 123px; position: absolute; bottom: 103px" Text="Delivery Address" width="105px"></asp:Label>
         </p>
@@ -33,9 +33,12 @@
             &nbsp;</p>
         <p>
             &nbsp;</p>
-        <p>
-            &nbsp;</p>
+       
+        
         <asp:Button ID="ButtonCancel" runat="server" style="z-index: 1; left: 101px; top: 281px; position: absolute" Text="Cancel" />
+        <p>
+            <asp:Button ID="btnTest" runat="server"  Text="test" />
+        </p>
     </form>
 </body>
 </html>
