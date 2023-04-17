@@ -20,9 +20,9 @@ namespace Testing2
 
             Int32 TestData = 1;
 
-            AnOrders.ItemN = TestData;
+            AnOrders.ItemNo = TestData;
 
-            Assert.AreEqual(AnOrders.ItemN, TestData);
+            Assert.AreEqual(AnOrders.ItemNo, TestData);
 
 
         }
@@ -55,19 +55,16 @@ namespace Testing2
         public void ItemAvaliable()
         {
             clsStock Item = new clsStock();
-            bool TestData = true;
-            Item.ItemAvaliable = TestData;
-            Assert.AreEqual(Item.ItemAvaliable, TestData);
+            Boolean TestData = true;
+            Item.Avaliable = TestData;
+            Assert.AreEqual(Item.Avaliable, TestData);
         }
         [TestMethod]
         public void PriceOK()
         {
             clsStock Item = new clsStock();
-
             Decimal TestData = 2;
-
             Item.Price = TestData;
-
             Assert.AreEqual(Item.Price, TestData);
 
 
