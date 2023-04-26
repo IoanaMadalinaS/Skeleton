@@ -9,6 +9,8 @@ using ClassLibrary;
 
 public partial class _1Viewer : System.Web.UI.Page
 {
+    
+
     protected void Page_Load(object sender, EventArgs e)
     {
         clsOrders AnOrders = new clsOrders();
@@ -16,5 +18,17 @@ public partial class _1Viewer : System.Web.UI.Page
         AnOrders = (clsOrders)Session["AnOrders"];
 
         Response.Write(AnOrders.CostumerName);
+
+        Response.Write(AnOrders.OrderId);
+        Response.Write(AnOrders.DeliveryAddress);
+
+        Response.Write(AnOrders.OrderDate);
+
+        Response.Write(AnOrders.PostCode);
+
+        Response.Write(AnOrders.Active);
+
+
+
     }
 }

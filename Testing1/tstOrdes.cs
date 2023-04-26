@@ -41,9 +41,9 @@ namespace Testing1
 
             String TestData = "Anna Brown";
 
-            AnOrders.CostumerName = TestData;
+            AnOrders.CustomerName = TestData;
 
-            Assert.AreEqual(AnOrders.CostumerName, TestData);
+            Assert.AreEqual(AnOrders.CustomerName, TestData);
 
         }
         [TestMethod]
@@ -106,22 +106,132 @@ namespace Testing1
             Assert.AreEqual(AnOrders.DeliveryStatus, TestData);
         }
 
-       /* [TestMethod]
-       public void FindMethodOK()
+        [TestMethod]
+        public void FindMethodOK()
         {
 
-            clsOrders AnOrders = new clsOrders;
+            clsOrders AnOrders = new clsOrders();
 
             Boolean Found = false;
 
-            String costumerName = "Anna";
+            Int32 OrderId = 1;
 
-            Found = AnOrders.Find(costumerName);
+            Found = AnOrders.Find(OrderId);
+
 
             Assert.IsTrue(Found);
 
-         }*/
+        }
+        [TestMethod]
+        public void TestOrderIdFound()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 1;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.OrderId != 21)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestOrderDateFound()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 1;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.OrderDate != Convert.ToDateTime("29/08/2002"))
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestCustomerName()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 1;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.CostumerName != "Test")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestDeliveryAddressFound()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 1;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.DeliveryAddress != "XXX XXX")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestPostCodeFound()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 1;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.PostCode != "XXX XXX")
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestTotalFound()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 1;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.Total != 22.50m)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void TestDeliveryStatusFound()
+        {
+            clsOrders AnOrders = new clsOrders();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 OrderID = 21;
+            Found = AnOrders.Find(OrderID);
+            if (AnOrders.DeliveryStatus != true)
+            {
+                OK = false;
+            }
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+       /* public void OrderIdMinLessOne()
+        {
+            clsOrders AnOrders = new clsOrders();
 
+            String Error = "";
+
+            String OrderID = "";
+
+            Error = AnOrders.Valid()
+        
+        }*/
     }
 }
 
