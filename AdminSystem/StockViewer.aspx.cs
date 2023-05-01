@@ -16,7 +16,35 @@ public partial class _1Viewer : System.Web.UI.Page
         //get the data from the session object
         AnStock = (clsStock)Session["AnStock"];
         //display the Item for this entry
-        Response.Write(AnStock.ItemNo);
+
+        //Response.Write("ItemNo : " + AnStock.ItemNo + "<br />");
+
+        Response.Write("DateAdded : " + AnStock.DateAdded.Date.ToShortDateString() + "<br />");
+
+        Response.Write("ItemDesc : " + AnStock.ItemDesc.ToString() + "<br />");
+
+        Response.Write("ItemName : " + AnStock.ItemName.ToString() + "<br />");
+
+        Response.Write("Price : " + AnStock.Price.ToString() + "<br />");
+
+        if (AnStock.Avaliable)
+        {
+            Response.Write("Avaliable : Yes<br />");
+        }
+        else
+        {
+            Response.Write("Avaliable : No<br />");
+        }
+
+
+        if (AnStock.Active)
+        {
+            Response.Write("Active : Yes<br />");
+        }
+        else
+        {
+            Response.Write("Active : No<br />");
+        }
 
     }
 }
