@@ -17,7 +17,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
     {
         clsCustomer AnCustomer = new clsCustomer();
 
-        mCustomer_ID = Convert.ToInt32(txtCustomer_ID.Text);
+        Customer_ID = Convert.ToInt32(txtCustomer_ID.Text);
         Firstname = txtFirstname.Text;
         Lastname = txtLastname.Text;
         Date_Of_Birth = Convert.ToDateTime(txtDate_of_Birth.Text);
