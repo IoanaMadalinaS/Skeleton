@@ -16,7 +16,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
     protected void BtnOK_Click1(object sender, EventArgs e)
     {
         clsCustomer AnCustomer = new clsCustomer();
-        //
+        ///
         Customer_ID = Convert.ToInt32(txtCustomer_ID.Text);
         Firstname = txtFirstname.Text;
         Lastname = txtLastname.Text;
