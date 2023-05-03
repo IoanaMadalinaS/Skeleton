@@ -122,7 +122,7 @@
         .auto-style17 {
             z-index: 1;
             left: 427px;
-            top: 14px;
+            top: 17px;
             position: absolute;
         }
     </style>
